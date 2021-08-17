@@ -1,5 +1,7 @@
 # anyenv
 eval "$(anyenv init -)"
+export PATH=$HOME/.anyenv/bin:$PATH
+
 # coreutils ex tac
 export PATH=$PATH:/usr/local/opt.coreutils/libexec/gnubin
 
