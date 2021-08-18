@@ -47,6 +47,9 @@ alias ls='ls -G'
 ## cd
 alias ..='cd ..'
 
+## test
+alias g='cd $(ghq list -p | fzf)'
+
 # vim
 export PATH="$PATH:/usr/local/Cellar/vim/8.1.2100/bin"
 
