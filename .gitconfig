@@ -1,0 +1,13 @@
+[user]
+	email = mtgnk2020@gmail.com
+	name = mtgnk
+[core]
+	ignorecase = false
+	excludesfile = ~/.global_gitignore
+	quotepath = false
+[commit]
+	template = ~/.user-template/git/.commit_message
+[alias]
+    unstage = reset HEAD
+    st = status
+    ch = checkout
