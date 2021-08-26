@@ -17,7 +17,7 @@ set ignoreeof=100
 export AWS_PROFILE=jtcf
 
 # custom command
-export PATH=$HOME/bin:$PATH
+export PATH=$HOME/.bin:$PATH
 
 # java
 export JAVA_HOME=`/usr/libexec/java_home -v "11"`

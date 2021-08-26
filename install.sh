@@ -16,9 +16,20 @@ else
   echo
 fi
 
-cd $THIS_DIR
 
 echo "start setup..."
+
+mkdir -p ~/bin
+mkdir -p ~/.user_template
+
+cd $THIS_DIR/bin
+
+for f in ??*
+do
+  ln -snfv "$THIS_DIR/bin/$f" ~/bin
+done
+
+cd $THIS_DIR
 
 for f in .??*
 do
@@ -27,6 +38,14 @@ do
   [[ "$f" == ".git" ]] && continue
   [[ "$f" == ".ssh" ]] && continue
 
-  ln -snfv "$THIS_DIR/$f" ~/
+  if [ -d $f ]; then
+    echo "directry:$f"
+    mkdir -p "~/$f"
+    ln -snfv "$THIS_DIR/$f/" ~/
+  else
+    echo "file:$f"
+    ln -snfv "$THIS_DIR/$f" ~/
+  fi
+
 done
 
