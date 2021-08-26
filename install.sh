@@ -19,16 +19,6 @@ fi
 
 echo "start setup..."
 
-mkdir -p ~/bin
-mkdir -p ~/.user_template
-
-cd $THIS_DIR/bin
-
-for f in ??*
-do
-  ln -snfv "$THIS_DIR/bin/$f" ~/bin
-done
-
 cd $THIS_DIR
 
 for f in .??*
