@@ -20,8 +20,12 @@ export AWS_PROFILE=jtcf
 export PATH=$HOME/.bin:$PATH
 
 # java
-export JAVA_HOME=`/usr/libexec/java_home -v "11"`
-PATH=${JAVA_HOME}/bin:${PATH}
+#export JAVA_HOME=`/usr/libexec/java_home -v "11"`
+#export PATH=${JAVA_HOME}/bin:${PATH}
+
+# 一旦
+# sudo ln -sfn /opt/homebrew/opt/openjdk@11/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-11.jdkqq
+export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
 
 # go
 export GOPATH=${HOME}/go
@@ -57,6 +61,7 @@ export PATH="$PATH:/usr/local/Cellar/vim/8.1.2100/bin"
 HISTSIZE=50000
 HISTIGNORE='history:pwd:ls:ls *:ll'
 HISTCONTROL=ignoreboth #空白、重複履歴を保存しない
+HISTTIMEFORMAT='%F %T '
 
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 ## 重複コマンドを履歴に保存しないようにする
@@ -77,4 +82,6 @@ export PS1='\[\033[32m\]\u@\[\033[00m\]:\[\033[36m\]\w\[\033[31m\]$(__git_ps1)\[
 
 # curl alias
 
+# brew
+eval $(/opt/homebrew/bin/brew shellenv)
 
