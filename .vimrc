@@ -61,7 +61,7 @@ endif
 "emacs like keybind in insert mode
 "inoremap <C-p> <Up>
 "inoremap <C-n> <Down>
-"inoremap <C-b> <Left>
+inoremap <C-b> <Left>
 inoremap <C-f> <Right>
 "inoremap <C-a> <HOME>
 "inoremap <C-e> <END>
