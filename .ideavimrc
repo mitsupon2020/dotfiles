@@ -1,2 +1,12 @@
 inoremap <silent> jj <ESC>
 set clipboard=unnamed
+"beep音けす
+set visualbell
+set noerrorbells
+"vim surroundと同様
+set surround
+
+"rename
+nnoremap cre :<C-u>action RenameElement<CR>
+
+inoremap <C-d> <Del>
