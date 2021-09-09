@@ -39,3 +39,4 @@ do
 
 done
 
+ln -snfv ~/.karabiner/complex_modifications/ ~/.config/karabiner/assets/
