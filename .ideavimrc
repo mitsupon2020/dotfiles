@@ -10,3 +10,5 @@ set surround
 nnoremap cre :<C-u>action RenameElement<CR>
 
 inoremap <C-d> <Del>
+
+nmap g] :action GotoImplementation<CR>
