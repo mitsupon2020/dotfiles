@@ -85,3 +85,5 @@ export PS1='\[\033[32m\]\u@\[\033[00m\]:\[\033[36m\]\w\[\033[31m\]$(__git_ps1)\[
 # brew
 eval $(/opt/homebrew/bin/brew shellenv)
 
+# sed
+alias sed=’gsed’
