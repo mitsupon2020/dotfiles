@@ -63,7 +63,7 @@ HISTIGNORE='history:pwd:ls:ls *:ll'
 HISTCONTROL=ignoreboth #空白、重複履歴を保存しない
 HISTTIMEFORMAT='%F %T '
 
-export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+export PROMPT_COMMAND="history -a; history -c; history -r;"
 ## 重複コマンドを履歴に保存しないようにする
 shopt -u histappend
 
