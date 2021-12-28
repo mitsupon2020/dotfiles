@@ -12,3 +12,6 @@ nnoremap cre :<C-u>action RenameElement<CR>
 inoremap <C-d> <Del>
 
 nmap g] :action GotoImplementation<CR>
+
+"テスト実行
+nnoremap \r :action RunClass<CR>

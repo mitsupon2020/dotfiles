@@ -1,6 +1,7 @@
 # anyenv
 eval "$(anyenv init -)"
 export PATH=$HOME/.anyenv/bin:$PATH
+# exec $SHELL -l
 
 # coreutils ex tac
 export PATH=$PATH:/usr/local/opt.coreutils/libexec/gnubin
@@ -14,14 +15,14 @@ set ignoreeof=100
 #export PATH=/usr/local/var/nodebrew/current/bin:$PATH
 
 # aws 
-export AWS_PROFILE=jtcf
+# export AWS_PROFILE=jtcf
 
 # custom command
 export PATH=$HOME/.bin:$PATH
 
 # java
-#export JAVA_HOME=`/usr/libexec/java_home -v "11"`
-#export PATH=${JAVA_HOME}/bin:${PATH}
+export JAVA_HOME=`/usr/libexec/java_home -v "17"`
+export PATH=${JAVA_HOME}/bin:${PATH}
 
 # 一旦
 # sudo ln -sfn /opt/homebrew/opt/openjdk@11/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-11.jdkqq
@@ -87,3 +88,10 @@ eval $(/opt/homebrew/bin/brew shellenv)
 
 # sed
 alias sed=’gsed’
+
+# Add Visual Studio Code (code)
+export PATH="$PATH:/usr/local/bin/code"
+
+# graphoviz
+export PATH="$PATH:/opt/homebrew/bin/dot"
+[ -f "/Users/ymitsugi/.ghcup/env" ] && source "/Users/ymitsugi/.ghcup/env" # ghcup-env
