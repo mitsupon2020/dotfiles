@@ -26,7 +26,7 @@ export PATH=${JAVA_HOME}/bin:${PATH}
 
 # 一旦
 # sudo ln -sfn /opt/homebrew/opt/openjdk@11/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-11.jdkqq
-export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
+# export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
 
 # go
 export GOPATH=${HOME}/go
@@ -87,7 +87,7 @@ export PS1='\[\033[32m\]\u@\[\033[00m\]:\[\033[36m\]\w\[\033[31m\]$(__git_ps1)\[
 eval $(/opt/homebrew/bin/brew shellenv)
 
 # sed
-alias sed=’gsed’
+alias sed='gsed'
 
 # Add Visual Studio Code (code)
 export PATH="$PATH:/usr/local/bin/code"
@@ -95,3 +95,6 @@ export PATH="$PATH:/usr/local/bin/code"
 # graphoviz
 export PATH="$PATH:/opt/homebrew/bin/dot"
 [ -f "/Users/ymitsugi/.ghcup/env" ] && source "/Users/ymitsugi/.ghcup/env" # ghcup-env
+
+# aws completer
+complete -C '/opt/homebrew/bin/aws_completer' aws
