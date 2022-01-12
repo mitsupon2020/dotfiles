@@ -6,6 +6,11 @@ set noerrorbells
 "vim surroundと同様
 set surround
 
+"インデント時2つ
+set tabstop=2
+"インデント時2つ
+set shiftwidth=2
+
 "rename
 nnoremap cre :<C-u>action RenameElement<CR>
 
