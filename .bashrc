@@ -59,10 +59,11 @@ alias g='cd $(ghq list -p | fzf)'
 export PATH="$PATH:/usr/local/Cellar/vim/8.1.2100/bin"
 
 # bashhistory
-HISTSIZE=50000
-HISTIGNORE='history:pwd:ls:ls *:ll'
-HISTCONTROL=ignoreboth #空白、重複履歴を保存しない
-HISTTIMEFORMAT='%F %T '
+export HISTSIZE=50000
+export HISTIGNORE='history:pwd:ls:ls *:ll'
+export HISTCONTROL=ignoreboth #空白、重複履歴を保存しない
+export HISTTIMEFORMAT='%F %T '
+export HISTCONTROL=ignoredups
 
 export PROMPT_COMMAND="history -a; history -c; history -r;"
 ## 重複コマンドを履歴に保存しないようにする
@@ -90,7 +91,7 @@ eval $(/opt/homebrew/bin/brew shellenv)
 alias sed='gsed'
 
 # Add Visual Studio Code (code)
-export PATH="$PATH:/usr/local/bin/code"
+# export PATH="$PATH:/usr/local/bin/code"
 
 # graphoviz
 export PATH="$PATH:/opt/homebrew/bin/dot"
