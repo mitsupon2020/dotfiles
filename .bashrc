@@ -1,7 +1,8 @@
 # anyenv
 eval "$(anyenv init -)"
-export PATH=$HOME/.anyenv/bin:$PATH
+export PATH="$PATH:$HOME/.anyenv/bin"
 # exec $SHELL -l
+
 
 # coreutils ex tac
 export PATH=$PATH:/usr/local/opt.coreutils/libexec/gnubin
@@ -99,3 +100,9 @@ export PATH="$PATH:/opt/homebrew/bin/dot"
 
 # aws completer
 complete -C '/opt/homebrew/bin/aws_completer' aws
+
+# emacs
+alias e="emacs -nw"
+
+# alias
+export PATH="$PATH:/usr/local/bin/"
