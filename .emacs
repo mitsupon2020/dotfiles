@@ -2,3 +2,5 @@
 (setq visible-bell t)
 (menu-bar-mode 0)
 (global-set-key "\C-h" `delete-backward-char)
+(when (eq system-type `darwin)
+  (setq ns-command-modifier (quote meta)))
