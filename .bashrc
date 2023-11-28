@@ -30,8 +30,8 @@ export PATH=${JAVA_HOME}/bin:${PATH}
 # export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
 
 # go
-export GOPATH=${HOME}/go
-export PATH=$GOPATH/bin:$PATH
+# export GOPATH=${HOME}/go
+# export PATH=$GOPATH/bin:$PATH
 
 # flutter
 export PATH="$PATH:/Users/ymitsugi/work/study/flutter/flutter/bin"
@@ -106,3 +106,11 @@ alias e="emacs -nw"
 
 # alias
 export PATH="$PATH:/usr/local/bin/"
+
+# git
+alias gpush="git push origin HEAD"
+
+. "$HOME/.cargo/env"
+
+# latex
+export PATH="$PATH:/usr/local/texlive/2023/bin/universal-darwin/"

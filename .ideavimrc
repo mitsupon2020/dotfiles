@@ -21,3 +21,5 @@ nmap g] :action GotoImplementation<CR>
 
 "テスト実行
 nnoremap \r :action RunClass<CR>
+
+

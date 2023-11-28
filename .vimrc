@@ -19,6 +19,9 @@ set autoindent
 "indentをspace2つにする
 set shiftwidth=2
 
+"縦移動のx軸はそのまま
+set nostartofline
+
 "制御文字を見えるようにする
 "記号もかえる
 "https://qiita.com/pollenjp/items/459a08a2cc59485fa08b
