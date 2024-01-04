@@ -114,3 +114,6 @@ alias gpush="git push origin HEAD"
 
 # latex
 export PATH="$PATH:/usr/local/texlive/2023/bin/universal-darwin/"
+
+# multipass
+export PATH="$PATH:/Users/ymitsugi/Library/Application Support/multipass/bin"
