@@ -6,7 +6,7 @@ set -eu
 THIS_DIR="$HOME/ghq/github.com/mtgyt/dotfiles"
 
 if [ ! -d "$THIS_DIR" ]; then
-  git clone https://github.com/mtgnk/dotfiles.git "$THIS_DIR"
+  git clone https://github.com/mtgyt/dotfiles.git "$THIS_DIR"
 else
   echo "$THIS_DIR already downloaded. Updating..."
   cd "$THIS_DIR"
@@ -39,4 +39,4 @@ do
 
 done
 
-ln -snfv ~/.karabiner/complex_modifications/ ~/.config/karabiner/assets/
+# ln -snfv ~/.karabiner/complex_modifications/ ~/.config/karabiner/assets/
