@@ -216,7 +216,7 @@ bind '"\C-n": history-search-forward'
 bind '"\C-p": history-search-backward'
 
 # bash prompt
-[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
+[[ -r "/opt/homebrew/etc/bash_completion.d/git-prompt.sh" ]] && . "/opt/homebrew/etc/bash_completion.d/git-prompt.sh"
 #source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
 #source /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
 GIT_PS1_SHOWDIRTYSTATE=true
