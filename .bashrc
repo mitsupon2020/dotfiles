@@ -1,6 +1,6 @@
 # anyenv
-eval "$(anyenv init -)"
-export PATH="$PATH:$HOME/.anyenv/bin"
+#eval "$(anyenv init -)"
+#export PATH="$PATH:$HOME/.anyenv/bin"
 # exec $SHELL -l
 #
 #
@@ -260,5 +260,6 @@ alias gpush="git push origin HEAD"
 # latex
 export PATH="$PATH:/usr/local/texlive/2023/bin/universal-darwin/"
 
-# multipass
-export PATH="$PATH:/Users/ymitsugi/Library/Application Support/multipass/bin"
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/ymitsugi/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
