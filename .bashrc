@@ -8,6 +8,10 @@ export PATH="$PATH:$HOME/.anyenv/bin"
 #
 #
 
+# volta install shell実行でbash_profile,bashrcに自動設定されていたパスを移動
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+
 # 指定したディレクトリ以下のファイルやディレクトリをfzfで検索し、選択した結果をコマンドに渡す関数
 # 使用例: ff /path/to/search "code"  # 選択したファイルやディレクトリをVS Codeで開く
 #
@@ -217,6 +221,7 @@ bind '"\C-p": history-search-backward'
 
 # bash prompt
 [[ -r "/opt/homebrew/etc/bash_completion.d/git-prompt.sh" ]] && . "/opt/homebrew/etc/bash_completion.d/git-prompt.sh"
+[[ -r "/opt/homebrew/etc/bash_completion.d/git-completion.bash" ]] && . "/opt/homebrew/etc/bash_completion.d/git-completion.bash"
 #source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
 #source /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
 GIT_PS1_SHOWDIRTYSTATE=true
