@@ -11,3 +11,5 @@
     unstage = reset HEAD
     st = status
     ch = checkout
+[init]
+	defaultBranch = main
