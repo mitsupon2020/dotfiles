@@ -15,7 +15,20 @@ export PATH="$VOLTA_HOME/bin:$PATH"
 # 指定したディレクトリ以下のファイルやディレクトリをfzfで検索し、選択した結果をコマンドに渡す関数
 # 使用例: ff /path/to/search "code"  # 選択したファイルやディレクトリをVS Codeで開く
 #
+#
 
+
+fb() {
+  local file
+  # ① fzf でファイル選択＆batプレビュー
+  file=$(git ls-files \
+    | fzf \
+        --preview 'bat --style=numbers --color=always {}' \
+        --preview-window right:60%) || return
+
+  # ② tig blame で開いて、スクロールしつつ行ごとの blame を確認
+  tig blame "$file"
+}
 
 gg() {
   local search_dir=$1
