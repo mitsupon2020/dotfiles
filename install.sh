@@ -3,10 +3,10 @@
 set -eu
 
 # 実行場所のディレクトリを取得
-THIS_DIR="$HOME/ghq/github.com/mtgyt/dotfiles"
+THIS_DIR="$HOME/ghq/github.com/mitsupon2020/dotfiles"
 
 if [ ! -d "$THIS_DIR" ]; then
-  git clone https://github.com/mtgyt/dotfiles.git "$THIS_DIR"
+  git clone https://github.com/mitsupon2020/dotfiles.git "$THIS_DIR"
 else
   echo "$THIS_DIR already downloaded. Updating..."
   cd "$THIS_DIR"
