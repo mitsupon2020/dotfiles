@@ -211,6 +211,8 @@ alias ..='cd ..'
 ## test
 alias g='cd $(ghq list -p | fzf)'
 
+# git
+alias gp='git push origin HEAD'
 # vim
 export PATH="$PATH:/usr/local/Cellar/vim/8.1.2100/bin"
 
@@ -276,3 +278,13 @@ export PATH="$PATH:/usr/local/texlive/2023/bin/universal-darwin/"
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/ymitsugi/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+#
+
+
+# pnpm
+export PNPM_HOME="/Users/ymitsugi/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
