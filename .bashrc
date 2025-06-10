@@ -177,8 +177,8 @@ set ignoreeof=100
 export PATH=$HOME/.bin:$PATH
 
 # java
-export JAVA_HOME=`/usr/libexec/java_home -v "17"`
-export PATH=${JAVA_HOME}/bin:${PATH}
+#export JAVA_HOME=`/usr/libexec/java_home -v "17"`
+#export PATH=${JAVA_HOME}/bin:${PATH}
 
 # 一旦
 # sudo ln -sfn /opt/homebrew/opt/openjdk@11/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk-11.jdkqq
@@ -270,7 +270,7 @@ export PATH="$PATH:/usr/local/bin/"
 # git
 alias gpush="git push origin HEAD"
 
-. "$HOME/.cargo/env"
+#. "$HOME/.cargo/env"
 
 # latex
 export PATH="$PATH:/usr/local/texlive/2023/bin/universal-darwin/"
