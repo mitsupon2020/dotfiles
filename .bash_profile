@@ -4,8 +4,8 @@ fi
 
 # fish
 # exec fish
-[[ -f ~/.bashrc ]] && source ~/.bashrc # ghcup-env
-. "$HOME/.cargo/env"
+#[[ -f ~/.bashrc ]] && source ~/.bashrc # ghcup-env
+#. "$HOME/.cargo/env"
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/ymitsugi/.rd/bin:$PATH"
