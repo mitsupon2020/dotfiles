@@ -230,9 +230,10 @@ shopt -u histappend
 # 複数行のコマンドのすべての行を同じ履歴エントリに保存する。
 # shopt -s cmdhist
 # shopt -s cmdhist shopt -s lithist HISTTIMEFORMAT='%F %T '
-
-bind '"\C-n": history-search-forward'
-bind '"\C-p": history-search-backward'
+if [[ $- == *i* ]]; then
+  bind '"\C-n": history-search-forward'
+  bind '"\C-p": history-search-backward'
+fi
 
 # bash prompt
 [[ -r "/opt/homebrew/etc/bash_completion.d/git-prompt.sh" ]] && . "/opt/homebrew/etc/bash_completion.d/git-prompt.sh"
