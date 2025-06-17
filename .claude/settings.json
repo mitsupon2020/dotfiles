@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm:*)",
+      "Bash(npm:*)",
+      "Bash(git:*)",
+      "Bash(cargo:*)",
+      "Read(**)",
+      "Edit(~/projects/**)",
+      "WebFetch(domain:*)"
+    ]
+  },
+  "cleanupPeriodDays": 60
+}

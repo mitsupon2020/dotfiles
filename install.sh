@@ -1,42 +1,45 @@
 #!/bin/bash
-
 set -eu
 
-# 実行場所のディレクトリを取得
-THIS_DIR="$HOME/ghq/github.com/mitsupon2020/dotfiles"
+# dotfiles リポジトリの場所
+DOTFILES="$HOME/ghq/github.com/mitsupon2020/dotfiles"
 
-if [ ! -d "$THIS_DIR" ]; then
-  git clone https://github.com/mitsupon2020/dotfiles.git "$THIS_DIR"
+if [ ! -d "$DOTFILES" ]; then
+  git clone https://github.com/mitsupon2020/dotfiles.git "$DOTFILES"
 else
-  echo "$THIS_DIR already downloaded. Updating..."
-  cd "$THIS_DIR"
+  echo "Updating dotfiles…"
+  cd "$DOTFILES"
   git stash
   git checkout master
   git pull origin master
-  echo
 fi
 
+cd "$DOTFILES"
 
-echo "start setup..."
+for f in .??*; do
+  case "$f" in
+    .DS_Store|.aws|.git|.ssh|.claude)  # .claude はあとで個別処理するのでスキップ
+      continue
+      ;;
+  esac
 
-cd $THIS_DIR
+  SRC="$DOTFILES/$f"
+  DEST="$HOME/$f"
 
-for f in .??*
-do
-  [[ "$f" == ".DS_Store" ]] && continue
-  [[ "$f" == ".aws" ]] && continue
-  [[ "$f" == ".git" ]] && continue
-  [[ "$f" == ".ssh" ]] && continue
-
-  if [ -d $f ]; then
-    echo "directry:$f"
-    mkdir -p "~/$f"
-    ln -snfv "$THIS_DIR/$f/" ~/
+  if [ -d "$SRC" ]; then
+    rm -rf "$DEST"
+    ln -snfv "$SRC" "$DEST"
   else
-    echo "file:$f"
-    ln -snfv "$THIS_DIR/$f" ~/
+    ln -snfv "$SRC" "$DEST"
   fi
-
 done
 
-# ln -snfv ~/.karabiner/complex_modifications/ ~/.config/karabiner/assets/
+# ─────────────────────────────────────────────
+# ~/.claude/settings.json をコピーする
+# ─────────────────────────────────────────────
+CLAUDE_DIR="$HOME/.claude"
+mkdir -p "$CLAUDE_DIR"
+# リポジトリ側の settings.json を常に上書きコピー
+cp -f "$DOTFILES/.claude/settings.json" "$CLAUDE_DIR/settings.json"
+
+echo "Done!"
