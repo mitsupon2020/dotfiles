@@ -4,6 +4,8 @@
       "Bash(npm:*)",
       "Bash(npm:*)",
       "Bash(git:*)",
+      "Bash(touch:*)",
+      "Bash(mkdir:*)",
       "Bash(cargo:*)",
       "Read(**)",
       "Edit(~/projects/**)",
