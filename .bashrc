@@ -236,8 +236,12 @@ if [[ $- == *i* ]]; then
 fi
 
 # bash prompt
-[[ -r "/opt/homebrew/etc/bash_completion.d/git-prompt.sh" ]] && . "/opt/homebrew/etc/bash_completion.d/git-prompt.sh"
-[[ -r "/opt/homebrew/etc/bash_completion.d/git-completion.bash" ]] && . "/opt/homebrew/etc/bash_completion.d/git-completion.bash"
+if [ -r /opt/homebrew/etc/profile.d/bash_completion.sh ]; then
+  . /opt/homebrew/etc/profile.d/bash_completion.sh
+elif [ -r /opt/homebrew/etc/bash_completion ]; then
+  . /opt/homebrew/etc/bash_completion
+fi
+
 #source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
 #source /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
 GIT_PS1_SHOWDIRTYSTATE=true
