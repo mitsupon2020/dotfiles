@@ -242,12 +242,6 @@ elif [ -r /opt/homebrew/etc/bash_completion ]; then
   . /opt/homebrew/etc/bash_completion
 fi
 
-# git prompt
-[ -r /opt/homebrew/etc/bash_completion.d/git-completion.bash ] \
-  && . /opt/homebrew/etc/bash_completion.d/git-completion.bash
-[ -r /opt/homebrew/etc/bash_completion.d/git-prompt.sh ] \
-  && . /opt/homebrew/etc/bash_completion.d/git-prompt.sh
-
 #source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
 #source /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
 GIT_PS1_SHOWDIRTYSTATE=true
