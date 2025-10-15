@@ -1,6 +1,4 @@
 #!/bin/bash
-tmux split-window -h
-tmux resize-pane -x "$(($(tmux display -p '#{window_width}') / 2))"
-tmux split-window -v
-tmux resize-pane -y "$(($(tmux display -p '#{window_height}') / 2))"
-
+tmux split-window -v -p 34;
+tmux split-window -h -p 67;
+tmux split-window -h -p 50;
